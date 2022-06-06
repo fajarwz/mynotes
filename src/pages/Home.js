@@ -41,8 +41,8 @@ export default function Home() {
 
     return (
         <div className="note-app__body">
-            <NoteCreate addNote={addNoteHandler.bind(this)} />
-            <NoteSearch search={SearchNoteHandler.bind(this)} />
+            <NoteCreate addNote={addNoteHandler} />
+            <NoteSearch search={SearchNoteHandler} />
 
             <h2>Catatan Aktif</h2>
             {notes.filter(
@@ -59,7 +59,7 @@ export default function Home() {
                             <NoteCard
                                 {...note}
                                 key={note.id}
-                                onDelete={removeNoteHandler.bind(this)}
+                                onDelete={removeNoteHandler}
                                 toggleArchive={toggleArchivedNoteHandler.bind(
                                     this
                                 )}
@@ -86,7 +86,7 @@ export default function Home() {
                             <NoteCard
                                 {...note}
                                 key={note.id}
-                                onDelete={removeNoteHandler.bind(this)}
+                                onDelete={removeNoteHandler}
                                 toggleArchive={toggleArchivedNoteHandler.bind(
                                     this
                                 )}

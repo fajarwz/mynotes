@@ -15,15 +15,17 @@ export default function NoteSearch(props) {
     return (
         <div className="note-search">
             <h2>Cari catatan</h2>
-            <form className="note-search__form" onSubmit={onSubmitEventHandler.bind(this)}>
+            <form className="note-search__form" onSubmit={onSubmitEventHandler}>
                 <input
                     className="note-search__search"
                     type="text"
                     placeholder="Cari judul catatan ..."
-                    onChange={searchFieldHandler.bind(this)}
+                    onChange={searchFieldHandler}
                     value={search}
                 />
-                <button className="submit" type="submit">Cari</button>
+                <button className="submit" type="submit">
+                    Cari
+                </button>
             </form>
         </div>
     );

@@ -41,7 +41,7 @@ export default function NoteCreate(props) {
     return (
         <div className="note-input">
             <h2>Buat catatan</h2>
-            <form onSubmit={onSubmitEventHandler.bind(this)}>
+            <form onSubmit={onSubmitEventHandler}>
                 <p className="note-input__title__char-limit">
                     Sisa karakter: {remainingChar}
                 </p>
@@ -50,7 +50,7 @@ export default function NoteCreate(props) {
                     type="text"
                     placeholder="Tulis judul ..."
                     name="title"
-                    onChange={titleFieldHandler.bind(this)}
+                    onChange={titleFieldHandler}
                     value={form.title}
                     ref={inputRef}
                     required
@@ -61,7 +61,7 @@ export default function NoteCreate(props) {
                     type="text"
                     placeholder="Tulis catatan ..."
                     name="body"
-                    onChange={bodyFieldHandler.bind(this)}
+                    onChange={bodyFieldHandler}
                     value={form.body}
                     required
                 ></textarea>
