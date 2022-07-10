@@ -42,7 +42,7 @@ export default function Home() {
     return (
         <div className="note-app__body">
             <NoteCreate addNote={addNoteHandler} />
-            <NoteSearch search={SearchNoteHandler} />
+            <NoteSearch searchTitle={SearchNoteHandler} />
 
             <h2>Catatan Aktif</h2>
             {notes.filter(

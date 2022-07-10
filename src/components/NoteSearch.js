@@ -1,21 +1,17 @@
 import { useState } from "react";
 
-export default function NoteSearch(props) {
+export default function NoteSearch({ searchTitle }) {
     const [search, setSearch] = useState("");
 
     function searchFieldHandler(event) {
         setSearch(event.target.value);
-    }
-
-    function onSubmitEventHandler(event) {
-        event.preventDefault();
-        props.search(search);
+        searchTitle(event.target.value)
     }
 
     return (
         <div className="note-search">
             <h2>Cari catatan</h2>
-            <form className="note-search__form" onSubmit={onSubmitEventHandler}>
+            <form className="note-search__form">
                 <input
                     className="note-search__search"
                     type="text"
